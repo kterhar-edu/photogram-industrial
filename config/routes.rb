@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   
   #get "/users/:id" => "users#show", as :user
   #resources :users, only: :show
-  get "/:username" => "users#show", as: :user
-  
+  get ":username/liked" => "users#liked", as: :liked
+
+  get ":username" => "users#show", as: :user
 end
